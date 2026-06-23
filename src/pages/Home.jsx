@@ -8,6 +8,16 @@ function Home() {
   const [marqueeText, setMarqueeText] = useState("Loading alerts...");
   const [loading, setLoading] = useState(true);
 
+  const sliderImages = [
+    "https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_10_ban6.jpg",
+    "https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_17_ban1.jpg",
+    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400",
+    "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400",
+    "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1400"
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setNotices([
@@ -19,8 +29,16 @@ function Home() {
       setMarqueeText("*** Urgent Notice: Half-Yearly Examinations 2026 will commence on the 10th of next month. Please check the Notice Board and download your respective schedules from the routine section. ***");
       setLoading(false);
     }, 400);
-    return () => clearTimeout(timer);
-  }, []);
+
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prevIndex) => (prevIndex + 1) % sliderImages.length);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(slideInterval);
+    };
+  }, [sliderImages.length]);
 
   const categoryBoxes = [
     {
@@ -110,7 +128,7 @@ function Home() {
   return (
     <div className="bg-[#f8fafc] text-slate-800 min-h-screen font-sans pb-20 overflow-x-hidden">
       
-      <div className="bg-amber-500 text-white p-2.5 flex items-center shadow-xs max-w-[1240px] mx-auto  md:rounded-md">
+      <div className="bg-amber-500 text-white p-2.5 flex items-center shadow-xs max-w-[1240px] mx-auto w-full">
         <span className="bg-white text-amber-600 px-3 py-0.5 font-extrabold mr-3 rounded text-[10px] md:text-xs uppercase tracking-wider shrink-0 shadow-xs">
           Notice
         </span>
@@ -120,18 +138,24 @@ function Home() {
       </div>
 
       <div className="relative w-full h-[460px] md:h-[540px] bg-slate-900 overflow-hidden flex items-center">
-    
-        <img 
-          src="https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_10_ban6.jpg" 
-          alt="University Campus Banner" 
-          className="absolute inset-0 w-full h-full object-cover opacity-45 object-center scale-105 animate-[pulse_8s_infinite_alternate]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
         
-        <div className="relative max-w-[1240px] w-full mx-auto px-4 md:px-8 flex flex-col items-start text-white z-10 mt-10 md:mt-0">
+        {sliderImages.map((imgUrl, index) => (
+          <img 
+            key={index}
+            src={imgUrl} 
+            alt={`University Campus Banner ${index + 1}`} 
+            className={`absolute inset-0 w-full h-full object-cover object-center scale-105 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? 'opacity-45 z-0 animate-[pulse_8s_infinite_alternate]' : 'opacity-0 z-0'
+            }`}
+          />
+        ))}
+
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent z-10"></div>
+        
+        <div className="relative max-w-[1240px] w-full mx-auto px-4 md:px-8 flex flex-col items-start text-white z-20 mt-10 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4 max-w-2xl drop-shadow-md uppercase">
-            Step Up With <br />
-            <span className="text-amber-400">Admission</span>
+            {/* Step Up With <br /> */} I lover my  <br />
+            <span className="text-amber-400">Wife</span>
           </h1>
           <p className="text-xs sm:text-sm md:text-base font-medium text-slate-300 max-w-md mb-8 drop-shadow-xs leading-relaxed">
             Discover exceptional educational resources, world-class faculty portfolios, and programs curated for your bright future.
@@ -152,12 +176,22 @@ function Home() {
             </button>
           </div>
         </div>
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
+          {sliderImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-amber-400 w-5' : 'bg-slate-400/50 hover:bg-white'
+              }`}
+            />
+          ))}
+        </div>
+
       </div>
 
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10 px-4">
-        
         <div className="lg:col-span-2 space-y-8">
-          
           <div className="bg-white rounded-none shadow-xs border border-slate-200 overflow-hidden">
             <div className="bg-[#0f2d59] text-white px-4 md:px-5 py-4 flex justify-between items-center border-b-2 border-amber-500">
               <h3 className="font-extrabold text-xs md:text-sm tracking-wider uppercase flex items-center gap-2">
@@ -204,6 +238,7 @@ function Home() {
               </div>
             )}
           </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {categoryBoxes.map((box, idx) => (
               <div key={idx} className="bg-white border border-slate-200 p-5 flex gap-4 hover:border-slate-400 transition duration-150">        
@@ -226,10 +261,9 @@ function Home() {
               </div>
             ))}
           </div>
-
         </div>
-        <div className="space-y-6">
 
+        <div className="space-y-6">
           <div className="bg-white border border-slate-200 text-center p-5 shadow-xs">
             <div className="bg-slate-100 text-slate-700 font-bold text-[10px] uppercase tracking-wider py-1.5 px-3 mb-4">
               Secretary (Rtd.), Govt. of Bangladesh
@@ -243,6 +277,7 @@ function Home() {
             </div>
             <h4 className="font-bold text-slate-900 text-sm tracking-tight">Redoan Hossain</h4>
           </div>
+
           <div className="bg-white border border-slate-200 text-center p-5 shadow-xs">
             <div className="bg-slate-100 text-slate-700 font-bold text-[10px] uppercase tracking-wider py-1.5 px-3 mb-4">
               Principal (Acting)
@@ -256,6 +291,7 @@ function Home() {
             </div>
             <h4 className="font-bold text-slate-900 text-sm tracking-tight">Mofazzel Hossain</h4>
           </div>
+
           <div className="bg-white border border-slate-200 shadow-xs">
             <div className="bg-[#0f2d59] text-white px-4 py-2 font-bold text-[10px] uppercase tracking-wider text-center">
               National Anthem
@@ -267,6 +303,7 @@ function Home() {
               </audio>
             </div>
           </div>
+
           <div className="bg-white border border-slate-200 overflow-hidden shadow-xs">
             <div className="bg-rose-600 text-white px-4 py-2.5 font-bold text-[10px] text-center tracking-wider uppercase">
               Emergency Hotlines
@@ -286,6 +323,7 @@ function Home() {
               </div>
             </div>
           </div>
+
           <div className="bg-white border border-slate-200 p-3 text-center shadow-xs">
             <div className="bg-slate-800 text-white font-bold text-[10px] uppercase tracking-wider py-1 mb-2">
               Government Portal
@@ -295,9 +333,9 @@ function Home() {
               <p className="text-[9px] text-slate-400 font-medium">All Services in One Platform</p>
             </a>
           </div>
-
         </div>
       </div>
+
       <div className="max-w-[1240px] mx-auto text-center mt-16 pt-8 border-t border-slate-200 px-4">
         <h2 className="text-xl md:text-3xl font-black text-[#0f2d59] uppercase tracking-tight">
           Our Honored Faculty Members

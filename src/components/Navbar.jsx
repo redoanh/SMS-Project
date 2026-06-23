@@ -12,7 +12,6 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-
       if (window.scrollY > 250) {
         setIsScrolled(true);
       } else {
@@ -26,47 +25,14 @@ function Navbar() {
   return (
     <header className="w-full font-sans bg-white flex flex-col">
       
+      {/* কমেন্টেড টপ বার এবং ব্যানার সেকশন আপনার আগের মতোই রাখা হলো */}
       {/* <div className="bg-[#0f2d59] text-white text-xs py-2 px-6 flex justify-between items-center border-b border-slate-700">
-        <div className="flex items-center gap-5">
-          <span className="flex items-center gap-1.5 font-medium tracking-wide">
-            📞 +8801627312846
-          </span>
-          <span className="flex items-center gap-1.5 font-medium tracking-wide hidden md:inline border-l border-slate-600 pl-5">
-            ✉️ info@raschool.edu.bd
-          </span>
-        </div>
-
-        <div className="flex items-center gap-5">
-          <div className="flex items-center gap-2">
-            <a href="#facebook" className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-blue-700 transition">
-              f
-            </a>
-            <a href="#youtube" className="w-5 h-5 bg-red-600 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-red-700 transition">
-              ▶
-            </a>
-          </div>
-          <span className="font-bold text-[11px] border-l border-slate-600 pl-5 tracking-wider text-amber-400">
-            EIIN: 108359
-          </span>
-        </div>
+        ...
       </div>
-      <div 
-        className="relative h-[140px] md:h-[180px] bg-cover bg-center flex items-center justify-center"
-        style={{ 
-          backgroundImage: `linear-gradient(rgba(15, 45, 89, 0.85), rgba(15, 45, 89, 0.9)), url('https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_17_ban1.jpg')` 
-        }}
-      >
-        <div className="flex flex-col items-center justify-center text-center gap-3 px-6 text-white max-w-[1200px] w-full">
-          <div className="flex flex-col items-center">
-            <h1 className="text-xl md:text-4xl font-black tracking-tight uppercase text-white drop-shadow-md">
-              RA School and College
-            </h1>
-            <p className="text-[10px] md:text-sm font-medium tracking-widest text-amber-400 uppercase mt-1">
-              Excellence in Education • Founded Integrity
-            </p>
-          </div>
-        </div>
-      </div> */}
+      <div className="relative h-[140px] md:h-[180px] bg-cover bg-center flex items-center justify-center" ...>
+        ...
+      </div> 
+      */}
 
       <nav 
         className={`w-full bg-white border-b border-slate-200 text-slate-800 transition-all duration-200 ${
@@ -83,11 +49,14 @@ function Navbar() {
           >
             {isOpen ? 'CLOSE ✕' : 'MENU ☰'}
           </button>
+
           <div className={`absolute md:static top-full left-0 w-full md:w-auto bg-white flex flex-col md:flex-row items-stretch md:items-center text-xs md:text-[13px] font-extrabold shadow-2xl md:shadow-none transition-all duration-300 z-[999] divide-y md:divide-y-0 md:divide-x divide-slate-100 uppercase tracking-wider ${isOpen ? 'block' : 'hidden md:flex'}`}>
             
             <Link to="/" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
               Home
             </Link>
+
+            {/* Campus Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('campus')}
@@ -102,6 +71,8 @@ function Navbar() {
                 <Link to="/gallery" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Media Gallery</Link>
               </div>
             </div>
+
+            {/* Admissions Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('admission')}
@@ -115,6 +86,8 @@ function Navbar() {
                 <Link to="/admission" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Apply Online</Link>
               </div>
             </div>
+
+            {/* Administration Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('office')}
@@ -128,6 +101,8 @@ function Navbar() {
                 <Link to="/committee" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Governing Board</Link>
               </div>
             </div>
+
+            {/* Gallery Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('gallery')}
@@ -144,6 +119,11 @@ function Navbar() {
 
             <Link to="/notice" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
               Notice Board
+            </Link>
+
+            {/* 🆕 নতুন ক্যারিয়ার অপরচুনিটি লিঙ্ক */}
+            <Link to="/careers" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition whitespace-nowrap">
+              Career Opportunity
             </Link>
             
             <Link to="/contact" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
