@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <header className="w-full font-sans bg-white flex flex-col">
       
-      {/* কমেন্টেড টপ বার এবং ব্যানার সেকশন আপনার আগের মতোই রাখা হলো */}
+     
       {/* <div className="bg-[#0f2d59] text-white text-xs py-2 px-6 flex justify-between items-center border-b border-slate-700">
         ...
       </div>
@@ -56,7 +56,6 @@ function Navbar() {
               Home
             </Link>
 
-            {/* Campus Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('campus')}
@@ -72,7 +71,6 @@ function Navbar() {
               </div>
             </div>
 
-            {/* Admissions Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('admission')}
@@ -87,7 +85,6 @@ function Navbar() {
               </div>
             </div>
 
-            {/* Administration Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('office')}
@@ -102,7 +99,6 @@ function Navbar() {
               </div>
             </div>
 
-            {/* Gallery Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('gallery')}
@@ -121,7 +117,6 @@ function Navbar() {
               Notice Board
             </Link>
 
-            {/* 🆕 নতুন ক্যারিয়ার অপরচুনিটি লিঙ্ক */}
             <Link to="/careers" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition whitespace-nowrap">
               Career Opportunity
             </Link>

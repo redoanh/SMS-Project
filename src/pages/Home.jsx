@@ -154,7 +154,7 @@ function Home() {
         
         <div className="relative max-w-[1240px] w-full mx-auto px-4 md:px-8 flex flex-col items-start text-white z-20 mt-10 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4 max-w-2xl drop-shadow-md uppercase">
-            {/* Step Up With <br /> */} I lover my  <br />
+            {/* Step Up With <br /> */} I love my  <br />
             <span className="text-amber-400">Wife</span>
           </h1>
           <p className="text-xs sm:text-sm md:text-base font-medium text-slate-300 max-w-md mb-8 drop-shadow-xs leading-relaxed">
