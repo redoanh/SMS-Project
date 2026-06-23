@@ -16,7 +16,6 @@ import Office from './pages/Office';
 
 function AppContent() {
   const location = useLocation();
-
   const isLoginPage = location.pathname.startsWith('/login');
 
   return (
@@ -26,8 +25,11 @@ function AppContent() {
         backgroundImage: `url('https://pub-c5e31b5cdafb419a866161d8d32a0213.r2.dev/category/alpona-bg.png')`,
       }}
     >
-      <div className="max-w-[1140px] mx-auto bg-white shadow-2xl border-x border-slate-200/80 min-h-screen flex flex-col">
+     
+      <div className="max-w-[1140px] mx-auto bg-white shadow-2xl border-x border-slate-200/80 min-h-screen flex flex-col relative">
+        
         {!isLoginPage && <Navbar />}
+        
         
         <div className="flex-grow">
           <Routes>
@@ -44,6 +46,7 @@ function AppContent() {
             <Route path="/office" element={<Office />} /> 
           </Routes>
         </div>
+        
         {!isLoginPage && <Footer />}
         
       </div>
