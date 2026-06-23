@@ -10,133 +10,146 @@ function Navbar() {
   };
 
   return (
-    <header className="w-full font-sans shadow-sm">
-      <div className="bg-[#1e3a8a] text-white text-xs sm:text-sm py-2 px-4 flex justify-between items-center border-b border-blue-800">
-        <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1">
+    <header className="w-full font-sans shadow-sm bg-white">
+      
+      {/* 🟦 Top Utility Bar */}
+      <div className="bg-[#0f2d59] text-white text-xs py-2 px-6 flex justify-between items-center border-b border-slate-700">
+        <div className="flex items-center gap-5">
+          <span className="flex items-center gap-1.5 font-medium tracking-wide">
             📞 +8801627312846
           </span>
-          <span className="flex items-center gap-1 hidden md:inline">
-            ✉️ RaSchool.edu.bd
+          <span className="flex items-center gap-1.5 font-medium tracking-wide hidden md:inline border-l border-slate-600 pl-5">
+            ✉️ info@raschool.edu.bd
           </span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-5">
           <div className="flex items-center gap-2">
-            <a href="#facebook" className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-red-600 transition">
+            <a href="#facebook" className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-blue-700 transition">
               f
             </a>
-            <a href="#youtube" className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-red-600 transition">
+            <a href="#youtube" className="w-5 h-5 bg-red-600 rounded-full flex items-center justify-center text-white text-[10px] hover:bg-red-700 transition">
               ▶
             </a>
           </div>
-          <span className="font-bold text-xs border-l border-blue-700 pl-3">
-            EIIN : 108359
+          <span className="font-bold text-[11px] border-l border-slate-600 pl-5 tracking-wider text-amber-400">
+            EIIN: 108359
           </span>
         </div>
       </div>
 
-     
+      {/* 🏛️ Center Institutional Branding Header Layer */}
       <div 
-        className="relative h-[200px] md:h-[280px] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[180px] md:h-[230px] bg-cover bg-center flex items-center justify-center"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_17_ban1.jpg')` 
+          backgroundImage: `linear-gradient(rgba(15, 45, 89, 0.85), rgba(15, 45, 89, 0.9)), url('https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_17_ban1.jpg')` 
         }}
       >
-        <div className="flex items-center gap-4 px-6 text-white text-center md:text-left flex-col md:flex-row">
-        
-          <div className="w-16 h-16 md:w-20 md:h-20 bg-white p-1 rounded-full flex items-center justify-center shadow-lg shrink-0">
-            <img 
-              src="https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_10_ban6.jpg" 
-              alt="School Logo" 
-              className="w-full h-full object-cover rounded-full"
-            />
-          </div>
-          <div>
-            <h1 className="text-xl md:text-3xl font-bold tracking-tight drop-shadow-md">
+        <div className="flex flex-col items-center justify-center text-center gap-3 px-6 text-white max-w-[1200px] w-full">
+          <div className="flex flex-col items-center">
+            <h1 className="text-2xl md:text-4xl font-black tracking-tight uppercase text-white drop-shadow-md">
               RA School and College
             </h1>
+            <p className="text-xs md:text-sm font-medium tracking-widest text-amber-400 uppercase mt-1">
+              Excellence in Education • Founded Integrity
+            </p>
           </div>
         </div>
       </div>
 
-      <nav className="bg-white border-y border-slate-200 sticky top-0 z-50 text-slate-800">
-        <div className="px-2 flex justify-center items-center min-h-[44px] relative">
-        
+      {/* 🧭 Universal Navigation Menu */}
+      <nav className="bg-white border-y border-slate-200 sticky top-0 z-50 text-slate-800 shadow-xs">
+        <div className="max-w-[1240px] mx-auto px-4 flex justify-between md:justify-center items-center min-h-[50px] relative">
+          
+          {/* Mobile Collapse Toggle Trigger */}
           <button 
             onClick={() => setIsOpen(!isOpen)} 
-            className="md:hidden text-xl text-slate-700 focus:outline-none ml-auto p-2 cursor-pointer"
+            className="md:hidden text-slate-700 focus:outline-hidden ml-auto p-2 cursor-pointer font-bold border border-slate-200 rounded-xs my-1"
           >
-            {isOpen ? '✕' : '☰'}
+            {isOpen ? 'CLOSE ✕' : 'MENU ☰'}
           </button>
 
-          <div className={`absolute md:static top-full left-0 w-full md:w-auto bg-white flex flex-col md:flex-row items-stretch md:items-center text-xs md:text-[13px] font-bold shadow-lg md:shadow-none transition-all duration-300 z-50 divide-y md:divide-y-0 md:divide-x divide-slate-200 ${isOpen ? 'block' : 'hidden md:flex'}`}>
+          {/* Navigation Links List */}
+          <div className={`absolute md:static top-full left-0 w-full md:w-auto bg-white flex flex-col md:flex-row items-stretch md:items-center text-xs md:text-[13px] font-extrabold shadow-2xl md:shadow-none transition-all duration-300 z-50 divide-y md:divide-y-0 md:divide-x divide-slate-100 uppercase tracking-wider ${isOpen ? 'block' : 'hidden md:flex'}`}>
             
-            <Link to="/" className="px-3 py-2.5 hover:bg-slate-50 text-center transition">হোম</Link>
+            <Link to="/" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
+              Home
+            </Link>
            
+            {/* Campus Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('campus')}
-                className="w-full md:w-auto px-3 py-2.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer"
+                className="w-full md:w-auto px-4 py-3.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer text-[#0f2d59]"
               >
-                <span>ক্যাম্পাস</span>
-                <span className="text-[9px] text-slate-500 group-hover:rotate-180 transition-transform">▼</span>
+                <span>Campus</span>
+                <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
-              <div className={`md:absolute left-0 mt-0 w-44 bg-white text-slate-700 shadow-xl border border-slate-200 md:hidden md:group-hover:block ${activeDropdown === 'campus' ? '!block' : ''}`}>
-                <Link to="/about" className="block px-4 py-2 hover:bg-slate-100 border-b border-slate-100">আমাদের সম্পর্কে</Link>
-                <Link to="/aims" className="block px-4 py-2 hover:bg-slate-100 border-b border-slate-100">লক্ষ্য ও উদ্দেশ্য</Link>
-                <Link to="/gallery" className="block px-4 py-2 hover:bg-slate-100">ফটো গ্যালারি</Link>
+              {/* Fixed class behavior here: hidden by default on mobile, block if active, md:group-hover:block for desktop hover */}
+              <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block ${activeDropdown === 'campus' ? '!block' : ''}`}>
+                <Link to="/about" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">About Us</Link>
+                <Link to="/aims" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Mission & Vision</Link>
+                <Link to="/gallery" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Media Gallery</Link>
               </div>
             </div>
 
+            {/* Admission Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('admission')}
-                className="w-full md:w-auto px-3 py-2.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer"
+                className="w-full md:w-auto px-4 py-3.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer text-[#0f2d59]"
               >
-                <span>ভর্তি</span>
-                <span className="text-[9px] text-slate-500 group-hover:rotate-180 transition-transform">▼</span>
+                <span>Admissions</span>
+                <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
-              <div className={`md:absolute left-0 mt-0 w-44 bg-white text-slate-700 shadow-xl border border-slate-200 md:hidden md:group-hover:block ${activeDropdown === 'admission' ? '!block' : ''}`}>
-                <Link to="/admission-info" className="block px-4 py-2 hover:bg-slate-100 border-b border-slate-100">ভর্তি বিজ্ঞপ্তি</Link>
-                <Link to="/admission" className="block px-4 py-2 hover:bg-slate-100">অনলাইন আবেদন</Link>
+              <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block ${activeDropdown === 'admission' ? '!block' : ''}`}>
+                <Link to="/admission-info" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Admission Guide</Link>
+                <Link to="/admission" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Apply Online</Link>
               </div>
             </div>
-
-            {/* <Link to="/institution-admission" className="px-3 py-2.5 hover:bg-slate-50 text-center transition">প্রাতিষ্ঠানিক ভর্তির লিংক</Link>
-            <Link to="/moushi-admission" className="px-3 py-2.5 hover:bg-slate-50 text-center transition">মাউশি কর্তৃক ভর্তির লিংক</Link> */}
             
+            {/* Administration Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('office')}
-                className="w-full md:w-auto px-3 py-2.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer"
+                className="w-full md:w-auto px-4 py-3.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer text-[#0f2d59]"
               >
-                <span>প্রশাসন</span>
-                <span className="text-[9px] text-slate-500 group-hover:rotate-180 transition-transform">▼</span>
+                <span>Administration</span>
+                <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
-              <div className={`md:absolute left-0 mt-0 w-44 bg-white text-slate-700 shadow-xl border border-slate-200 md:hidden md:group-hover:block ${activeDropdown === 'office' ? '!block' : ''}`}>
-                <Link to="/office" className="block px-4 py-2 hover:bg-slate-100 border-b border-slate-100">শিক্ষকদের তথ্য</Link>
-                <Link to="/committee" className="block px-4 py-2 hover:bg-slate-100">কমিটি</Link>
+              <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block ${activeDropdown === 'office' ? '!block' : ''}`}>
+                <Link to="/office" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Faculty Directory</Link>
+                <Link to="/committee" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Governing Board</Link>
               </div>
             </div>
 
+            {/* Gallery Dropdown */}
             <div className="relative group">
               <button 
                 onClick={() => toggleDropdown('gallery')}
-                className="w-full md:w-auto px-3 py-2.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer"
+                className="w-full md:w-auto px-4 py-3.5 hover:bg-slate-50 flex justify-center items-center gap-1 cursor-pointer text-[#0f2d59]"
               >
-                <span>গ্যালারি</span>
-                <span className="text-[9px] text-slate-500 group-hover:rotate-180 transition-transform">▼</span>
+                <span>Gallery</span>
+                <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
-              <div className={`md:absolute left-0 mt-0 w-44 bg-white text-slate-700 shadow-xl border border-slate-200 md:hidden md:group-hover:block ${activeDropdown === 'gallery' ? '!block' : ''}`}>
-                <Link to="/gallery" className="block px-4 py-2 hover:bg-slate-100 border-b border-slate-100">ছবি গ্যালারি</Link>
-                <Link to="/video-gallery" className="block px-4 py-2 hover:bg-slate-100">ভিডিও গ্যালারি</Link>
+              <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block ${activeDropdown === 'gallery' ? '!block' : ''}`}>
+                <Link to="/gallery" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Photo Albums</Link>
+                <Link to="/video-gallery" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Video Channels</Link>
               </div>
             </div>
 
-            <Link to="/notice" className="px-3 py-2.5 hover:bg-slate-50 text-center transition">নোটিশ কর্নার</Link>
-            <Link to="/contact" className="px-3 py-2.5 hover:bg-slate-50 text-center transition">যোগাযোগ</Link>
-            <Link to="/login-options" className="px-3 py-2.5 hover:bg-slate-50 text-center text-blue-800 transition"> লগইন</Link>
+            <Link to="/notice" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
+              Notice Board
+            </Link>
+            
+            <Link to="/contact" className="px-4 py-3.5 hover:bg-slate-50 text-center text-[#0f2d59] transition">
+              Contact Us
+            </Link>
+            
+            <Link to="/login-options" className="px-5 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 text-center transition font-black">
+              Portal Login 🔑
+            </Link>
+
           </div>
         </div>
       </nav>
