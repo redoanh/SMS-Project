@@ -110,7 +110,6 @@ function Home() {
   return (
     <div className="bg-[#f8fafc] text-slate-800 min-h-screen font-sans pb-20 overflow-x-hidden">
       
-      {/* 📢 Notice Marquee Ticker */}
       <div className="bg-amber-500 text-white p-2.5 flex items-center shadow-xs max-w-[1240px] mx-auto md:mt-4 md:rounded-md">
         <span className="bg-white text-amber-600 px-3 py-0.5 font-extrabold mr-3 rounded text-[10px] md:text-xs uppercase tracking-wider shrink-0 shadow-xs">
           Notice
@@ -120,18 +119,15 @@ function Home() {
         </marquee>
       </div>
 
-      {/* 📸 Premium University Hero Section */}
       <div className="relative w-full h-[460px] md:h-[540px] bg-slate-900 overflow-hidden flex items-center">
-        {/* Hero Background Image */}
+    
         <img 
           src="https://wlfsc.edu.bd/wp-content/uploads/2025/11/imgi_10_ban6.jpg" 
           alt="University Campus Banner" 
           className="absolute inset-0 w-full h-full object-cover opacity-45 object-center scale-105 animate-[pulse_8s_infinite_alternate]"
         />
-        {/* Dark Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
         
-        {/* Hero Text Overlays & Action Buttons */}
         <div className="relative max-w-[1240px] w-full mx-auto px-4 md:px-8 flex flex-col items-start text-white z-10 mt-10 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4 max-w-2xl drop-shadow-md uppercase">
             Step Up With <br />
@@ -141,7 +137,6 @@ function Home() {
             Discover exceptional educational resources, world-class faculty portfolios, and programs curated for your bright future.
           </p>
           
-          {/* Action CTAs stacked beautifully across breaklines */}
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <button 
               onClick={() => navigate('/admission')}
@@ -159,13 +154,10 @@ function Home() {
         </div>
       </div>
 
-      {/* 🏛️ Main Content Grid layout */}
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10 px-4">
         
-        {/* Left Columns - Announcements & Academic Links */}
         <div className="lg:col-span-2 space-y-8">
           
-          {/* Notice Board Table Container */}
           <div className="bg-white rounded-none shadow-xs border border-slate-200 overflow-hidden">
             <div className="bg-[#0f2d59] text-white px-4 md:px-5 py-4 flex justify-between items-center border-b-2 border-amber-500">
               <h3 className="font-extrabold text-xs md:text-sm tracking-wider uppercase flex items-center gap-2">
@@ -212,8 +204,6 @@ function Home() {
               </div>
             )}
           </div>
-
-          {/* Academic Portal Grid boxes */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {categoryBoxes.map((box, idx) => (
               <div key={idx} className="bg-white border border-slate-200 p-5 flex gap-4 hover:border-slate-400 transition duration-150">        
@@ -238,11 +228,8 @@ function Home() {
           </div>
 
         </div>
-
-        {/* Right Sidebar Column - Administration Profiles & Hotlines */}
         <div className="space-y-6">
 
-          {/* Leadership Member 1 */}
           <div className="bg-white border border-slate-200 text-center p-5 shadow-xs">
             <div className="bg-slate-100 text-slate-700 font-bold text-[10px] uppercase tracking-wider py-1.5 px-3 mb-4">
               Secretary (Rtd.), Govt. of Bangladesh
@@ -256,8 +243,6 @@ function Home() {
             </div>
             <h4 className="font-bold text-slate-900 text-sm tracking-tight">Redoan Hossain</h4>
           </div>
-
-          {/* Leadership Member 2 */}
           <div className="bg-white border border-slate-200 text-center p-5 shadow-xs">
             <div className="bg-slate-100 text-slate-700 font-bold text-[10px] uppercase tracking-wider py-1.5 px-3 mb-4">
               Principal (Acting)
@@ -271,8 +256,6 @@ function Home() {
             </div>
             <h4 className="font-bold text-slate-900 text-sm tracking-tight">Mofazzel Hossain</h4>
           </div>
-
-          {/* Anthem / Audio Player */}
           <div className="bg-white border border-slate-200 shadow-xs">
             <div className="bg-[#0f2d59] text-white px-4 py-2 font-bold text-[10px] uppercase tracking-wider text-center">
               National Anthem
@@ -284,8 +267,6 @@ function Home() {
               </audio>
             </div>
           </div>
-
-          {/* Emergency Helplines */}
           <div className="bg-white border border-slate-200 overflow-hidden shadow-xs">
             <div className="bg-rose-600 text-white px-4 py-2.5 font-bold text-[10px] text-center tracking-wider uppercase">
               Emergency Hotlines
@@ -305,8 +286,6 @@ function Home() {
               </div>
             </div>
           </div>
-
-          {/* Gov Services External Link */}
           <div className="bg-white border border-slate-200 p-3 text-center shadow-xs">
             <div className="bg-slate-800 text-white font-bold text-[10px] uppercase tracking-wider py-1 mb-2">
               Government Portal
@@ -319,8 +298,6 @@ function Home() {
 
         </div>
       </div>
-
-      {/* 👥 Lower Faculty Roster Segment */}
       <div className="max-w-[1240px] mx-auto text-center mt-16 pt-8 border-t border-slate-200 px-4">
         <h2 className="text-xl md:text-3xl font-black text-[#0f2d59] uppercase tracking-tight">
           Our Honored Faculty Members
