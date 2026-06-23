@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <header className="w-full font-sans bg-white flex flex-col">
       
-      <div className="bg-[#0f2d59] text-white text-xs py-2 px-6 flex justify-between items-center border-b border-slate-700">
+      {/* <div className="bg-[#0f2d59] text-white text-xs py-2 px-6 flex justify-between items-center border-b border-slate-700">
         <div className="flex items-center gap-5">
           <span className="flex items-center gap-1.5 font-medium tracking-wide">
             📞 +8801627312846
@@ -66,7 +66,7 @@ function Navbar() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <nav 
         className={`w-full bg-white border-b border-slate-200 text-slate-800 transition-all duration-200 ${
