@@ -110,7 +110,7 @@ function Home() {
   return (
     <div className="bg-[#f8fafc] text-slate-800 min-h-screen font-sans pb-20 overflow-x-hidden">
       
-      <div className="bg-amber-500 text-white p-2.5 flex items-center shadow-xs max-w-[1240px] mx-auto md:mt-4 md:rounded-md">
+      <div className="bg-amber-500 text-white p-2.5 flex items-center shadow-xs max-w-[1240px] mx-auto  md:rounded-md">
         <span className="bg-white text-amber-600 px-3 py-0.5 font-extrabold mr-3 rounded text-[10px] md:text-xs uppercase tracking-wider shrink-0 shadow-xs">
           Notice
         </span>
