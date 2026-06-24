@@ -15,8 +15,6 @@ function LoginSelection() {
       alert('অনুগ্রহ করে Login As থেকে আপনার রোল সিলেক্ট করুন!');
       return;
     }
-
-    // ড্রপডাউনে সিলেক্ট করা রোল অনুযায়ী নির্দিষ্ট লিংকে রিডাইরেক্ট করবে
     if (loginRole === 'student') {
       navigate('/login/student');
     } else if (loginRole === 'teacher') {
@@ -29,25 +27,20 @@ function LoginSelection() {
   return (
     <div className="w-full min-h-[calc(100vh-250px)] bg-slate-50 flex flex-col font-sans">
       
-      {/* 📋 Welcome টেক্সট (As seen in Screenshot (5).png) */}
       <div className="w-full text-center py-6 px-4">
         <h2 className="text-slate-700 text-sm md:text-[17px] font-normal tracking-wide">
           Welcome to Education Management Information Software (EMIS)
         </h2>
       </div>
 
-      {/* 📦 লগইন বক্স এরিয়া */}
       <div className="flex-grow flex items-start justify-center pt-2 pb-12 px-4">
         <div className="w-full max-w-[360px] bg-white border border-slate-200 rounded-xs shadow-xs p-6 md:p-8">
           
-          {/* Sign In হেডিং */}
           <h1 className="text-3xl text-center text-slate-700 font-light mb-6">
             Sign In
           </h1>
 
           <form onSubmit={handleLoginSubmit} className="space-y-4">
-            
-            {/* 🔽 ১. রোল সিলেকশন ড্রপডাউন (Student, Teacher, Guardian) */}
             <div>
               <label className="block text-center text-xs font-bold text-slate-800 mb-1">
                 Login As
@@ -64,8 +57,6 @@ function LoginSelection() {
                 <option value="guardian">Guardian</option>
               </select>
             </div>
-
-            {/* 👤 ২. ইউজারনেম ইনপুট ফিল্ড */}
             <div>
               <input
                 type="text"
@@ -76,8 +67,6 @@ function LoginSelection() {
                 required
               />
             </div>
-
-            {/* 🔑 ৩. পাসওয়ার্ড ইনপুট ফিল্ড */}
             <div>
               <input
                 type="password"
@@ -88,8 +77,6 @@ function LoginSelection() {
                 required
               />
             </div>
-
-            {/* ⬜ Remember Me চেকবক্স */}
             <div className="flex items-center justify-center gap-2 pt-1">
               <label className="text-xs font-bold text-slate-700 select-none cursor-pointer" htmlFor="remember">
                 Remember me
@@ -103,7 +90,6 @@ function LoginSelection() {
               />
             </div>
 
-            {/* 🔵 লগইন সাবমিট বাটন */}
             <div className="text-center pt-2">
               <button
                 type="submit"

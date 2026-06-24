@@ -13,6 +13,13 @@ import Notice from './pages/Notice';
 import Result from './pages/Result';
 import Contact from './pages/Contact';
 import Office from './pages/Office';
+import AdmissionGuideline from './pages/AdmissionGuideline';
+import FacultyDirectory from './pages/FacultyDirectory';
+import GoverningBoard from './pages/GoverningBoard';
+import PhotoAlbums from './pages/PhotoAlbums';
+import VideoChannel from './pages/VideoChannel';
+import MissionVision from './pages/MissionVision';
+
 
 function AppContent() {
   const location = useLocation();
@@ -44,6 +51,13 @@ function AppContent() {
             <Route path="/result" element={<Result />} /> 
             <Route path="/contact" element={<Contact />} /> 
             <Route path="/office" element={<Office />} /> 
+            <Route path="/admissionguidline" element={<AdmissionGuideline />} />
+             <Route path="/facultydirectory" element={<FacultyDirectory />} /> 
+             <Route path="/governingboard" element={<GoverningBoard />} />
+             <Route path="/gallery" element={<PhotoAlbums />} />
+             <Route path="/video-gallery" element={<VideoChannel />} />
+             <Route path="/aims" element={<MissionVision />} />
+            
           </Routes>
         </div>
         

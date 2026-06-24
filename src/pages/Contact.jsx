@@ -19,8 +19,8 @@ function Contact() {
     e.preventDefault();
     console.log("Contact Message Data:", contactData);
     
-    // 🌐 FUTURE API CALL PLACEHOLDER:
-    // পরে লারাভেল এপিআই-তে মেসেজ পাঠাতে এখানে fetch/axios কল বসাবেন:
+    
+    
     /*
     fetch('http://127.0.0.1:8000/api/contact', {
       method: 'POST',
@@ -36,7 +36,6 @@ function Contact() {
     <div className="bg-[#f3f4f6] min-h-screen py-12 px-4 font-sans">
       <div className="max-w-[1100px] mx-auto space-y-10">
         
-        {/* হেডার সেকশন */}
         <div className="text-center max-w-[600px] mx-auto">
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#1e3a8a] mb-2">Contact Us</h1>
           <p className="text-gray-500 text-sm md:text-base">
@@ -59,7 +58,6 @@ function Contact() {
               </div>
             </div>
 
-            {/* ফোন নম্বর */}
             <div className="bg-white p-5 rounded-2xl shadow-xs border border-gray-100 flex items-start gap-4">
               <div className="bg-emerald-50 text-emerald-600 p-3 rounded-xl font-bold text-xl">📞</div>
               <div>
@@ -69,7 +67,6 @@ function Contact() {
               </div>
             </div>
 
-            {/* ইমেইল */}
             <div className="bg-white p-5 rounded-2xl shadow-xs border border-gray-100 flex items-start gap-4">
               <div className="bg-amber-50 text-amber-600 p-3 rounded-xl font-bold text-xl">✉️</div>
               <div>
@@ -133,7 +130,7 @@ function Contact() {
         <div className="bg-white p-4 rounded-2xl shadow-md border border-gray-100 overflow-hidden">
           <h3 className="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">🌐 Campus Location Map</h3>
           <div className="w-full h-[300px] rounded-xl overflow-hidden bg-gray-200 relative">
-            {/* ডেমো গুগল ম্যাপ আইফ্রেম (পরবর্তীতে আপনার স্কুলের অরিজিনাল ম্যাপ এম্বেড লিংক বসাতে পারবেন) */}
+            
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14610.1654316315!2d90.42436445!3d23.72807355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b85006b52755%3A0xc66579930bf435f3!2sMugda%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1719000000000!5m2!1sen!2sbd"
               width="100%" 

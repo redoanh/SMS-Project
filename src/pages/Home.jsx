@@ -150,7 +150,7 @@ function Home() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-750 via-slate-750/70 to-transparent z-10"></div>
         
         <div className="relative max-w-[1240px] w-full mx-auto px-4 md:px-8 flex flex-col items-start text-white z-20 mt-10 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4 max-w-2xl drop-shadow-md uppercase">

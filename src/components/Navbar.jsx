@@ -80,7 +80,7 @@ function Navbar() {
                 <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
               <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block z-[1000] ${activeDropdown === 'admission' ? '!block' : ''}`}>
-                <Link to="/admission-info" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Admission Guide</Link>
+                <Link to="/admissionguidline" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Admission Guide</Link>
                 <Link to="/admission" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Apply Online</Link>
               </div>
             </div>
@@ -94,8 +94,8 @@ function Navbar() {
                 <span className="text-[8px] text-slate-400 group-hover:rotate-180 transition-transform">▼</span>
               </button>
               <div className={`hidden md:absolute left-0 mt-0 w-48 bg-white text-slate-700 shadow-xl border border-slate-200 md:group-hover:block z-[1000] ${activeDropdown === 'office' ? '!block' : ''}`}>
-                <Link to="/office" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Faculty Directory</Link>
-                <Link to="/committee" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Governing Board</Link>
+                <Link to="/facultydirectory" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 border-b border-slate-100 transition">Faculty Directory</Link>
+                <Link to="/governingboard" className="block px-4 py-2.5 text-[11px] hover:bg-slate-50 transition">Governing Board</Link>
               </div>
             </div>
 
