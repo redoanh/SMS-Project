@@ -19,6 +19,7 @@ import GoverningBoard from './pages/GoverningBoard';
 import PhotoAlbums from './pages/PhotoAlbums';
 import VideoChannel from './pages/VideoChannel';
 import MissionVision from './pages/MissionVision';
+import CareerOpportunities from './pages/CareerOpportunities';
 
 
 function AppContent() {
@@ -57,6 +58,7 @@ function AppContent() {
              <Route path="/gallery" element={<PhotoAlbums />} />
              <Route path="/video-gallery" element={<VideoChannel />} />
              <Route path="/aims" element={<MissionVision />} />
+             <Route path="/careers" element={<CareerOpportunities />} />
             
           </Routes>
         </div>
