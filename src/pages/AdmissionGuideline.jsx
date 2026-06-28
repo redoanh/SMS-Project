@@ -6,7 +6,6 @@ function AdmissionGuideline() {
     <div className="bg-[#f3f4f6] min-h-screen py-12 px-4 font-sans">
       <div className="max-w-[900px] mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
         
-        {/* Header Banner */}
         <div className="bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] text-white p-8 text-center">
           <h1 className="text-3xl font-extrabold mb-2 tracking-tight">Admission Guidelines & Information</h1>
           <p className="text-blue-100 font-medium">Academic Session: 2026-2027</p>
@@ -14,7 +13,6 @@ function AdmissionGuideline() {
 
         <div className="p-8 space-y-8">
           
-          {/* Section 1: Admission Process Steps */}
           <div>
             <h3 className="text-xl font-bold text-[#1e3a8a] border-b-2 border-gray-100 pb-2 mb-6 flex items-center gap-2">
               🚀 Application Steps
@@ -47,8 +45,6 @@ function AdmissionGuideline() {
 
             </div>
           </div>
-
-          {/* Section 2: Required Documents */}
           <div>
             <h3 className="text-xl font-bold text-[#1e3a8a] border-b-2 border-gray-100 pb-2 mb-4 flex items-center gap-2">
               📄 Required Documents
@@ -78,7 +74,6 @@ function AdmissionGuideline() {
             </div>
           </div>
 
-          {/* Section 3: Eligibility & Group Selection */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-lg font-bold text-[#1e3a8a] mb-3 flex items-center gap-2">
@@ -98,8 +93,6 @@ function AdmissionGuideline() {
               </div>
             </div>
           </div>
-
-          {/* Section 4: Contact/Helpline */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 text-center">
             <h4 className="font-bold text-[#1e3a8a] mb-2 text-lg">Need Assistance with Enrollment?</h4>
             <p className="text-sm text-gray-600 mb-4">Our dedicated help desk operates from 9:00 AM to 4:00 PM (Sunday through Thursday)</p>
@@ -108,8 +101,6 @@ function AdmissionGuideline() {
               <div>✉ admission@school.edu.bd</div>
             </div>
           </div>
-
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 border-t border-gray-100">
             <Link to="/admission" className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-xl shadow-md text-center text-decoration-none transition">
               Go to Admission Form

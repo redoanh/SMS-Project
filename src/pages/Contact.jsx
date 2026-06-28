@@ -18,9 +18,6 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Contact Message Data:", contactData);
-    
-    
-    
     /*
     fetch('http://127.0.0.1:8000/api/contact', {
       method: 'POST',
